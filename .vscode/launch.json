@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Train: [Stage 1] ECG Pre-train",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/experiments/train_ecg.py",
+            "args": [
+                "--data_root", "${workspaceFolder}/dataset/"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Train: [Stage 2] CE Predictor Pre-train",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/experiments/train_ce.py",
+            "args": [
+                "--data_root", "${workspaceFolder}/dataset/"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Train: [Stage 3] mmWave Joint Training",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/experiments/train_mmwave.py",
+            "args": [
+                "--data_root", "${workspaceFolder}/dataset/"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
